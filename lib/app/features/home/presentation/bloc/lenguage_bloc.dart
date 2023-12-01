@@ -2,6 +2,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:multi_lenguages/app/common/l10n/locales.dart';
 import 'package:multi_lenguages/app/features/home/data/services/language_service.dart';
 
 import '../../data/models/language_model.dart';

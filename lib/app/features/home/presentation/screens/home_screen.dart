@@ -40,7 +40,8 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 0, 83, 105),
+                      foregroundColor: Colors.white,
+                      backgroundColor: const Color.fromARGB(255, 0, 83, 105),
                       minimumSize: const Size(200, 50),
                     ),
                     onPressed: () {
@@ -74,7 +75,7 @@ class HomeScreen extends StatelessWidget {
               ),
             );
         }
-
+        print('language:::: ${state.languageCode}');
         return Scaffold(
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 0, 83, 105),
@@ -82,11 +83,10 @@ class HomeScreen extends StatelessWidget {
               child: Text(
                 FlutterI18n.translate(context, "home.title"),
                 textAlign: TextAlign.center,
-                
               ),
             ),
             actions: [
-              LanguageMenu(languages: state.languages),
+              LanguageMenu(languageCode: state.languageCode),
             ],
           ),
           body: body,
